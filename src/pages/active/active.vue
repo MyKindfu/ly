@@ -17,7 +17,7 @@ export default {
     },
   data () {
     return {
-      selectedLabelDefault: 'Vip',
+      selectedLabelDefault: '全部',
       tabs: [{
         label: '全部',
       }, {

@@ -178,11 +178,24 @@ function subjectFilter(val) {
   }
   return ''
 }
+//活动
 function filterActStatus(val){
   const obj = {
       'process':'进行中',
       'nostart':'未开始',
       'end': '已结束',
+    }
+    if(val){
+      return  obj[val]
+    }
+    return ''
+}
+//活动详情
+function filterActDetail(val){
+  const obj = {
+      'process':'我要参加',
+      'nostart':'活动还未开始',
+      'end': '活动已结束',
     }
     if(val){
       return  obj[val]
@@ -200,4 +213,4 @@ function filterActColor() {
     }
     return ''
 }
-export { formatDate, filterActStatus, filterActColor}
+export { formatDate, filterActStatus, filterActColor,filterActDetail}
