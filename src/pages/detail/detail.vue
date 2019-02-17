@@ -6,6 +6,7 @@
 
 <script>
 import detailComp from "@/components/detailComp/detailComp";
+import img from '@/assets/images/detail-img(1).png'
 export default {
   components: {
     detailComp
@@ -18,7 +19,7 @@ export default {
             date: '2018-04-30 12:00',
             num: '50',
             txt: '独自去旅行，很多时候会收获惊喜，也会遭遇无法预期的危险，西班牙一位滑雪爱好者在比利牛斯山脉狭窄地区滑雪时，意外遭遇雪崩，他稳住身形，与雪崩展开竞赛，最后幸运地逃过这场意外。',
-            img: ['','','']
+            img: [img,'','']
         }
     };
   }

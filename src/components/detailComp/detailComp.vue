@@ -9,15 +9,15 @@
       <div class="intro-txt"> {{info.txt}} </div>
       <ul class="img-show">
           <li v-for="(item,index) in info.img" :key='index'>
-              <img src="" alt="">
+              <img :src="item" alt="">
           </li>
       </ul>
       <div class="footer">
-          <button class="btn" :disabled="info.status == 'process' ? false : true" 
-            @click="clickHandler">{{info.status | filterActDetail}}</button>    
+          <button class="btn" :disabled="info.status == 'process' ? false : true"
+            @click="clickHandler">{{info.status | filterActDetail}}</button>
       </div>
   </div>
-  
+
 </template>
 
 <script>
