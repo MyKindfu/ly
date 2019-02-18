@@ -6,17 +6,19 @@ import router from './router'
 import Cube from 'cube-ui'
 import store from './store'
 import axios from '@/assets/js/axiosInterceptors.js'
-
+import VideoPlayer from 'vue-video-player'
 import permission from 'tcyx-permission'
 import * as customFilter from './filters/filter'
 Vue.use(Cube)
 import './assets/css/base.css'
 import './assets/css/cube.less'
 import './assets/font/iconfont.css'
+require('video.js/dist/video-js.css')
+require('vue-video-player/src/custom-theme.css')
 Vue.config.productionTip = false
 Vue.prototype.axios = axios
 axios.defaults.baseURL = process.env.baseURL
-
+Vue.use(VideoPlayer)
 import VCharts from 'v-charts'
 import echarts from 'echarts'
 Vue.prototype.$echarts = echarts
