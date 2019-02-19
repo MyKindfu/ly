@@ -2,10 +2,40 @@
     .cube-tab-bar{
       height: 36px;
       line-height: 36px;
-      
+
       .cube-tab{
         font-size: 16px;
         padding: 0;
       }
     }
+}
+.content{
+  .tab{
+    .cube-tab {
+      flex: initial;
+      padding: 7px 0;
+      text-align: center;
+      width: 47px;
+      margin: 0 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    .cube-tab_active{
+      color: #333;
+      position: relative;
+    }
+    .cube-tab_active:after{
+      content: '';
+      position: absolute;
+      left: 8px;
+      bottom: -3px;
+      width: 30px;
+      height: 5px;
+      border-radius: 20px;
+      background: #E89D43;
+    }
+    .cube-tab-bar-slider{
+      display: none;
+    }
+  }
 }

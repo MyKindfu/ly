@@ -8,6 +8,7 @@ import active  from '@/pages/active/active'
 import detail from '@/pages/detail/detail'
 import video from '@/pages/video/video'
 import videoDetail from '@/pages/detail/videoDetail'
+import deploy from '@/components/deploy/deploy'
 Vue.use(Router)
 
 export default new Router({
@@ -36,6 +37,11 @@ export default new Router({
       path: '/videoDetail',
       name: '视频详情',
       component: videoDetail
+    },
+    {
+      path: '/deploy',
+      name: '',
+      component: deploy
     }
   ]
 })
