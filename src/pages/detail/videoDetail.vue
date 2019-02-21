@@ -2,11 +2,13 @@
   <div class="main">
     <div class="header">
       <video
-        src="@/assets/images/video.mp4"
+        poster="@/assets/images/facter-img (2).png"
         controls="controls"
         ref="video"
         x5-video-player-type="h5"
-      ></video>
+      >
+        <source src="@/assets/images/video.mp4" type="video/mp4">
+      </video>
     </div>
     <div class="content">
       <div class="tab padding-12">
@@ -36,6 +38,11 @@
           </ul>
         </div>
       </div>
+    </div>
+    <div class="comment-box">
+      <div class="comment-input"><input v-model="value" placeholder="说点什么吧" @focus="focusInput"></div>
+      <div v-show="!btnShow"><i class="iconfont icon-dianzan"></i></div>
+      <div class="fabu-btn" v-show="btnShow" @click="fabu">发表</div>
     </div>
   </div>
 </template>
@@ -72,7 +79,32 @@
             text:'怎么能这么漂亮。我也好想去哟，什么时候是旺季，需要准备些什么东西，什么时候下雪需要准备些什么东西，什么时候下雪需要准备些什么东。怎么能这么漂亮。我也好想去哟，什么时候是旺季，需要准备些什么东西，什么时候下雪需要准备些什么东西，什么时候下雪需要准备些什么东',
             ellipsis: false
           }
-        ]
+        ],
+        value: '',
+        btnShow: false
+      }
+    },
+    watch: {
+      value(){
+        if(this.value !== ''){
+          this.btnShow = true
+        }else {
+          this.btnShow = false
+        }
+      }
+    },
+    methods: {
+      focusInput () {
+      },
+      fabu () {
+        let sr = {}
+        sr['name'] = '赵晓茹'
+        sr['time'] = '2019-12-32'
+        sr['text'] = this.value
+        sr['ellipsis'] = false
+        console.log(sr)
+        this.commentList.push(sr)
+        this.value = ''
       }
     }
   }
@@ -147,6 +179,41 @@
           margin-top: 5px;
         }
       }
+    }
+  }
+  .comment-box{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: white;
+    width: 100%;
+    border-top: 1px solid #fafafa;
+    padding: 10px 17px ;
+    display: flex;
+    justify-content: space-between;
+    .comment-input{
+      width: calc(100% - 40px);
+      background: #EEEEEE;
+      border-radius: 20px;
+      height: 30px;
+      padding: 0 17px;
+    }
+    input{
+      border: none;
+      outline: none;
+      background: none;
+      font-size: 12px;
+      width: 100%;
+      height: 100%;
+      line-height: 30px;
+    }
+    .icon-dianzan{
+      font-size: 18px;
+    }
+    .fabu-btn{
+      font-size: 15px;
+      color: #E89D43FF;
+      line-height: 25px;
     }
   }
 </style>

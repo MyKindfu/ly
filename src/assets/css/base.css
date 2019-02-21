@@ -59,3 +59,6 @@ textarea {  -webkit-appearance: none;}
   -webkit-touch-callout: none;
   -webkit-user-select: none;
 }
+video{
+  object-fit: fill;
+}

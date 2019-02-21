@@ -38,10 +38,5 @@ export default new Router({
       name: '视频详情',
       component: videoDetail
     },
-    {
-      path: '/deploy',
-      name: '',
-      component: deploy
-    }
   ]
 })
