@@ -35,6 +35,7 @@ Object.keys(customFilter).forEach(key => {
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

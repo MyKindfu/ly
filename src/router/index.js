@@ -8,7 +8,8 @@ import active  from '@/pages/active/active'
 import detail from '@/pages/detail/detail'
 import video from '@/pages/video/video'
 import videoDetail from '@/pages/detail/videoDetail'
-import deploy from '@/components/deploy/deploy'
+import newFeature from '@/pages/newFeature/newFeature'
+import checkAddress from '@/pages/checkAddress/checkAddress'
 Vue.use(Router)
 
 export default new Router({
@@ -37,6 +38,21 @@ export default new Router({
       path: '/videoDetail',
       name: '视频详情',
       component: videoDetail
+    },
+    {
+      path: '/videoDetail',
+      name: '视频详情',
+      component: videoDetail
+    },
+    {
+      path: '/newFeature',
+      name: '我要晒图',
+      component: newFeature
+    },
+    {
+      path: '/checkAddress',
+      name: '选择地址',
+      component: checkAddress
     },
   ]
 })

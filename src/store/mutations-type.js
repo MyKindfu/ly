@@ -1,1 +1,2 @@
-// mutation 常量
+// 被选中的地址
+export const ADDRESS = 'ADDRESS'
